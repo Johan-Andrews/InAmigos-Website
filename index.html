@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
   <title>InAmigos Foundation | Empowering Communities & Building Futures</title>
   <meta name="description"
     content="InAmigos Foundation is a Section 8 non-profit organization spreading education, food security, women empowerment, animal welfare, and environmental sustainability across 28 states in India. Learn about our active projects like BachpanShala and Seva.">
@@ -29,6 +30,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Style Sheet -->
   <link rel="stylesheet" href="style.css">
@@ -59,6 +63,15 @@
 
   <!-- 2. Hero Section -->
   <section class="hero" id="hero">
+    <!-- Changing Background Slider -->
+    <div class="hero-bg-slider" id="heroBgSlider">
+      <div class="hero-bg-slide active" style="background-image: url('https://inamigosfoundation.org.in/public/storage/gallery/1738054440.jpg');"></div>
+      <div class="hero-bg-slide" style="background-image: url('https://inamigosfoundation.org.in/public/storage/gallery/1690908247.jpeg');"></div>
+      <div class="hero-bg-slide" style="background-image: url('https://inamigosfoundation.org.in/public/storage/gallery/1690908498.jpg');"></div>
+      <div class="hero-bg-slide" style="background-image: url('https://inamigosfoundation.org.in/public/storage/gallery/1738054458.jpg');"></div>
+      <div class="hero-img-overlay"></div>
+    </div>
+
     <!-- Animated background particles -->
     <div class="hero-particles">
       <div class="particle"></div>
@@ -70,40 +83,44 @@
     </div>
 
     <div class="hero-content">
-      <div class="hero-badge">🌱 #InAmigos | Making India Better</div>
-      <h1 class="hero-title">
-        <span class="line-reveal">Together,</span>
-        <span class="line-reveal delay-1">We Build</span>
-        <span class="line-reveal delay-2 highlight-word">Brighter Futures</span>
-      </h1>
-      <p class="hero-subtitle">
-        InAmigos Foundation — a Section 8 certified non-profit empowering communities
-        across India through education, food security, women's rights, animal welfare, and
-        environmental sustainability.
-      </p>
-      <div class="hero-cta-group">
-        <a href="https://inamigosfoundation.org.in/contact" target="_blank" class="btn btn-primary pulse-btn" id="heroDonateBtn">❤️ Donate Now</a>
-        <a href="https://inamigosfoundation.org.in/contact" target="_blank" class="btn btn-outline" id="heroVolunteerBtn">🤝 Volunteer With Us</a>
+      <div class="hero-badge" style="margin: 0 auto 1.5rem;">🌱 #InAmigos | Uniting Minds for Change</div>
+      
+      <div class="hero-text-row">
+        <h1 class="hero-title">
+          <span class="line-reveal">Together,</span>
+          <span class="line-reveal delay-1">We Build</span>
+          <span class="line-reveal delay-2 highlight-word">Brighter Futures</span>
+        </h1>
+        <p class="hero-subtitle">
+          InAmigos Foundation — a Section 8 certified non-profit empowering communities
+          across India through education, food security, women's rights, animal welfare, and
+          environmental sustainability.
+        </p>
       </div>
-      <div class="hero-scroll-hint">
+
+      <div class="hero-cta-group">
+        <div class="electric-border-wrapper" data-color="#E85D26">
+          <a href="https://inamigosfoundation.org.in/contact" target="_blank" class="eb-btn">Donate Now</a>
+        </div>
+        <div class="electric-border-wrapper" data-color="#2C6E49">
+          <a href="https://inamigosfoundation.org.in/contact" target="_blank" class="eb-btn">Volunteer With Us</a>
+        </div>
+        <div class="electric-border-wrapper" data-color="#F9C74F">
+          <a href="https://inamigosfoundation.org.in/contact" target="_blank" class="eb-btn">Contact Us</a>
+        </div>
+      </div>
+      
+      <div class="hero-scroll-hint" style="justify-content: center; margin-top: 4rem;">
         <span>Scroll to explore</span>
         <div class="scroll-arrow"></div>
       </div>
     </div>
-
-    <div class="hero-visual">
-      <!-- Uses a gradient overlay on a meaningful image -->
-      <img
-        src="https://inamigosfoundation.org.in/public/storage/gallery/1743051485.jpg"
-        alt="InAmigos Foundation volunteers in action"
-        class="hero-img">
-      <div class="hero-img-overlay"></div>
-    </div>
   </section>
 
   <!-- 3. About InAmigos Foundation -->
-  <section class="about-section" id="about">
-    <div class="container">
+  <section class="about-section" id="about" style="position: relative;">
+    <div id="light-rays-container" class="light-rays-container"></div>
+    <div class="container" style="position: relative; z-index: 2;">
       <div class="section-label">🏛️ Who We Are</div>
       <div class="about-grid">
         <div class="about-text fade-in-left">
@@ -148,149 +165,60 @@
     </div>
   </section>
 
-  <!-- 4. Stats Counter Strip -->
-  <section class="stats-strip">
-    <div class="stats-container">
-      <div class="stat-item">
-        <div class="stat-number-wrapper">
-          <div class="stat-number" data-target="200">0</div>
-          <div class="stat-plus">+</div>
+  <!-- 4. Stats Counter Strip as SpotlightCards -->
+  <section class="stats-strip" id="stats">
+    <div class="container">
+      <div class="section-label" style="text-align: center; color: var(--yellow);">📈 Our Impact</div>
+      <h2 class="section-title center" style="color: white;">By The Numbers</h2>
+      <div class="spotlightCardsContainer">
+        <div class="card-spotlight" style="--spotlight-color: rgba(46, 217, 223, 0.25);">
+          <div class="stat-number-wrapper">
+            <div class="stat-number" data-target="200">0</div>
+            <div class="stat-plus">+</div>
+          </div>
+          <div class="stat-label">Volunteers Nationwide</div>
         </div>
-        <div class="stat-label">Volunteers Nationwide</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-number-wrapper">
-          <div class="stat-number" data-target="28">0</div>
+        <div class="card-spotlight" style="--spotlight-color: rgba(212, 68, 216, 0.25);">
+          <div class="stat-number-wrapper">
+            <div class="stat-number" data-target="28">0</div>
+          </div>
+          <div class="stat-label">States Covered</div>
         </div>
-        <div class="stat-label">States Covered</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-number-wrapper">
-          <div class="stat-number" data-target="50000">0</div>
-          <div class="stat-plus">+</div>
+        <div class="card-spotlight" style="--spotlight-color: rgba(189, 16, 174, 0.25);">
+          <div class="stat-number-wrapper">
+            <div class="stat-number" data-target="50000">0</div>
+            <div class="stat-plus">+</div>
+          </div>
+          <div class="stat-label">Beneficiaries Helped</div>
         </div>
-        <div class="stat-label">Beneficiaries Helped</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-number-wrapper">
-          <div class="stat-number" data-target="6">0</div>
+        <div class="card-spotlight" style="--spotlight-color: rgba(202, 94, 84, 0.25);">
+          <div class="stat-number-wrapper">
+            <div class="stat-number" data-target="6">0</div>
+          </div>
+          <div class="stat-label">Active Projects</div>
         </div>
-        <div class="stat-label">Active Projects</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-number-wrapper">
-          <div class="stat-number" data-target="30000">0</div>
-          <div class="stat-plus">+</div>
+        <div class="card-spotlight" style="--spotlight-color: rgba(127, 236, 136, 0.25);">
+          <div class="stat-number-wrapper">
+            <div class="stat-number" data-target="30000">0</div>
+            <div class="stat-plus">+</div>
+          </div>
+          <div class="stat-label">Interns Trained</div>
         </div>
-        <div class="stat-label">Interns Trained (4 Years)</div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Our Projects — Horizontal Scroll Cards -->
-  <section class="projects-section" id="projects">
-    <div class="container">
+  <!-- 5. Our Projects — Circular Gallery -->
+  <section class="projects-section" id="projects" style="padding-bottom: 2rem;">
+    <div class="container" style="text-align: center; margin-bottom: 2rem;">
       <div class="section-label">💡 Our Initiatives</div>
       <h2 class="section-title">Six Pillars of Change</h2>
-      <p class="projects-intro">
-        Each project under InAmigos Foundation targets a specific dimension of
-        social upliftment — from feeding the hungry to empowering women and
-        protecting nature.
-      </p>
     </div>
-
-    <!-- Horizontal scrolling track -->
-    <div class="projects-scroll-wrapper" id="projectsScrollWrapper">
-      <div class="projects-track">
-
-        <div class="project-card" style="--card-color: #E85D26;">
-          <div class="project-icon">📚</div>
-          <div class="project-tag">Education</div>
-          <h3 class="project-name">BachpanShala</h3>
-          <p class="project-desc">
-            Bridging the education gap for underprivileged children through
-            basic digital literacy, life skills, and school education support.
-            Nurturing young minds to build bright futures.
-          </p>
-          <div class="project-impact">👧 Children Empowered</div>
-          <a href="https://inamigosfoundation.org.in/causes" target="_blank" class="project-link">Explore →</a>
-        </div>
-
-        <div class="project-card" style="--card-color: #2C6E49;">
-          <div class="project-icon">🍽️</div>
-          <div class="project-tag">Humanitarian</div>
-          <h3 class="project-name">Project Seva</h3>
-          <p class="project-desc">
-            Over <strong>50,000+ meals and clothing items</strong> distributed
-            to underprivileged families across India. Serving humanity with
-            compassion, one meal at a time.
-          </p>
-          <div class="project-impact">🤲 50,000+ Meals Given</div>
-          <a href="https://inamigosfoundation.org.in/causes" target="_blank" class="project-link">Explore →</a>
-        </div>
-
-        <div class="project-card" style="--card-color: #9B5DE5;">
-          <div class="project-icon">👩</div>
-          <div class="project-tag">Women Empowerment</div>
-          <h3 class="project-name">Project Udaan</h3>
-          <p class="project-desc">
-            Soaring towards a brighter future — empowering women through
-            self-help groups, skill development, financial independence, and
-            menstrual hygiene awareness in rural communities.
-          </p>
-          <div class="project-impact">🌸 Rural Women Uplifted</div>
-          <a href="https://inamigosfoundation.org.in/causes" target="_blank" class="project-link">Explore →</a>
-        </div>
-
-        <div class="project-card" style="--card-color: #F77F00;">
-          <div class="project-icon">🐾</div>
-          <div class="project-tag">Animal Welfare</div>
-          <h3 class="project-name">Project Jeev</h3>
-          <p class="project-desc">
-            Empowering lives and spreading compassion — feeding <strong>50+
-            stray animals daily</strong>, rescue operations, and protection
-            drives through our volunteer network.
-          </p>
-          <div class="project-impact">🐕 50+ Animals Fed Daily</div>
-          <a href="https://inamigosfoundation.org.in/causes" target="_blank" class="project-link">Explore →</a>
-        </div>
-
-        <div class="project-card" style="--card-color: #2C6E49;">
-          <div class="project-icon">🌿</div>
-          <div class="project-tag">Environment</div>
-          <h3 class="project-name">Project Prakriti</h3>
-          <p class="project-desc">
-            Plant for a better tomorrow — <strong>20,000+ saplings planted</strong>,
-            advocacy for sustainable farming, environmental conservation, and
-            eco-friendly agricultural practices.
-          </p>
-          <div class="project-impact">🌳 20,000+ Trees Planted</div>
-          <a href="https://inamigosfoundation.org.in/causes" target="_blank" class="project-link">Explore →</a>
-        </div>
-
-        <div class="project-card" style="--card-color: #E85D26;">
-          <div class="project-icon">💼</div>
-          <div class="project-tag">Skill Development</div>
-          <h3 class="project-name">Project Vikas</h3>
-          <p class="project-desc">
-            Enhancing employability through internships in data operations,
-            finance, research, content writing, digital marketing, and social
-            work. <strong>30,000+ interns trained</strong> in four years.
-          </p>
-          <div class="project-impact">🎓 30,000+ Interns Trained</div>
-          <a href="https://inamigosfoundation.org.in/causes" target="_blank" class="project-link">Explore →</a>
-        </div>
-
-      </div><!-- .projects-track -->
-    </div><!-- .projects-scroll-wrapper -->
-
-    <!-- Scroll indicator -->
-    <div class="scroll-hint-row">
-      <span>← Swipe/Drag horizontally to see all projects →</span>
+    
+    <div id="circular-gallery-container" style="height: 550px; width: 100%; position: relative;"></div>
+    
+    <div class="scroll-hint-row" style="margin-top: 1rem;">
+      <span>← Drag or Scroll horizontally to explore →</span>
     </div>
   </section>
 
@@ -426,41 +354,30 @@
       <div class="section-label">📅 Recent Events</div>
       <h2 class="section-title">Milestones & Activities</h2>
 
-      <div class="timeline">
+      <div class="projects-scroll-wrapper" id="eventsScrollWrapper" style="margin-top: 2rem;">
+        <div class="projects-track" style="padding-bottom: 1rem;">
+          <div class="project-card" style="--card-color: var(--orange); padding: 1.5rem; min-width: 250px; height: auto;">
+            <div class="project-tag">22 March 2025</div>
+            <h3 class="project-name" style="font-size: 1.2rem; margin-top: 0.5rem;">World Water Day 2025</h3>
+            <p class="project-desc" style="font-size: 0.9rem; margin-bottom: 0;">Highlighted the importance of water conservation and collective action to ensure clean water for all communities across India.</p>
+          </div>
 
-        <div class="timeline-item fade-in-up">
-          <div class="timeline-date">22 March 2025</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-tag">Community</span>
-            <h4>World Water Day 2025</h4>
-            <p>Highlighted the importance of water conservation and collective action to ensure clean water for all communities across India.</p>
-            <a href="https://inamigosfoundation.org.in/events" target="_blank" class="timeline-link">Read More →</a>
+          <div class="project-card" style="--card-color: var(--yellow); padding: 1.5rem; min-width: 250px; height: auto;">
+            <div class="project-tag">20 March 2025</div>
+            <h3 class="project-name" style="font-size: 1.2rem; margin-top: 0.5rem; color: var(--navy);">International Day of Happiness 2025</h3>
+            <p class="project-desc" style="font-size: 0.9rem; margin-bottom: 0; color: rgba(26,26,46,0.8);">Spreading joy, positivity, and well-being through engaging activities, workshops, and inspiring community discussions.</p>
+          </div>
+
+          <div class="project-card" style="--card-color: var(--green); padding: 1.5rem; min-width: 250px; height: auto;">
+            <div class="project-tag">11 Feb 2025</div>
+            <h3 class="project-name" style="font-size: 1.2rem; margin-top: 0.5rem;">Women & Girls in Science</h3>
+            <p class="project-desc" style="font-size: 0.9rem; margin-bottom: 0;">Celebrated and encouraged women and girls to pursue careers in science, technology, engineering, and mathematics.</p>
           </div>
         </div>
-
-        <div class="timeline-item fade-in-up">
-          <div class="timeline-date">20 March 2025</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-tag">Happiness</span>
-            <h4>International Day of Happiness 2025</h4>
-            <p>Spreading joy, positivity, and well-being through engaging activities, workshops, and inspiring community discussions.</p>
-            <a href="https://inamigosfoundation.org.in/events" target="_blank" class="timeline-link">Read More →</a>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-in-up">
-          <div class="timeline-date">11 Feb 2025</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-tag">Education</span>
-            <h4>Women and Girls in Science Day</h4>
-            <p>Celebrated and encouraged women and girls to pursue careers in science, technology, engineering, and mathematics across our outreach zones.</p>
-            <a href="https://inamigosfoundation.org.in/events" target="_blank" class="timeline-link">Read More →</a>
-          </div>
-        </div>
-
+      </div>
+      
+      <div class="scroll-hint-row" style="margin-top: 1rem;">
+        <span>← Swipe/Drag horizontally to see all events →</span>
       </div>
 
       <div style="text-align:center; margin-top:3rem;">
@@ -571,10 +488,10 @@
       <!-- Social media icons row -->
       <div class="social-row fade-in-up" style="transition-delay:0.4s;">
         <span>Follow us:</span>
-        <a href="https://www.instagram.com/inamigos/" class="social-icon" target="_blank" aria-label="Instagram" id="socialInsta">📷</a>
-        <a href="https://www.facebook.com/inamigos.inamigos" class="social-icon" target="_blank" aria-label="Facebook" id="socialFb">📘</a>
-        <a href="https://www.linkedin.com/company/inamigos-foundation/" class="social-icon" target="_blank" aria-label="LinkedIn" id="socialLinkedin">💼</a>
-        <a href="https://www.youtube.com/@inamigosfoundation" class="social-icon" target="_blank" aria-label="YouTube" id="socialYoutube">▶️</a>
+        <a href="https://www.instagram.com/inamigos/" class="social-icon" target="_blank" aria-label="Instagram" id="socialInsta"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/inamigos.inamigos" class="social-icon" target="_blank" aria-label="Facebook" id="socialFb"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/inamigos-foundation/" class="social-icon" target="_blank" aria-label="LinkedIn" id="socialLinkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@inamigosfoundation" class="social-icon" target="_blank" aria-label="YouTube" id="socialYoutube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </section>
@@ -627,11 +544,11 @@
 
         <div class="footer-contact">
           <h4>Contact Us</h4>
-          <p>📍 Ward No. 5, Gram Post, Sipat Ujwal Nagar,<br>
+          <p><i class="fa-solid fa-location-dot"></i> Ward No. 5, Gram Post, Sipat Ujwal Nagar,<br>
              Bilaspur, Chhattisgarh — 495555</p>
-          <p>📧 <a href="mailto:inamigosfoundation@gmail.com">inamigosfoundation@gmail.com</a></p>
-          <p>📞 <a href="tel:+916267309902">+91 626 730 9902</a></p>
-          <p>🌐 <a href="https://inamigosfoundation.org.in" target="_blank">inamigosfoundation.org.in</a></p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:inamigosfoundation@gmail.com">inamigosfoundation@gmail.com</a></p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:+916267309902">+91 626 730 9902</a></p>
+          <p><i class="fa-solid fa-globe"></i> <a href="https://inamigosfoundation.org.in" target="_blank">inamigosfoundation.org.in</a></p>
         </div>
 
       </div>
@@ -644,6 +561,12 @@
   </footer>
 
   <!-- Interactivity Scripts -->
+  <script type="module">
+    import * as OGL from 'https://esm.sh/ogl@1.0.11';
+    window.ogl = OGL;
+    window.dispatchEvent(new Event('ogl-ready'));
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script>
     // 1. Sticky navbar dynamic shadow
     window.addEventListener('scroll', () => {
@@ -669,7 +592,19 @@
       });
     });
 
-    // 3. Animated counter on scroll
+    // 3. SpotlightCard interaction
+    const spotlightCards = document.querySelectorAll('.card-spotlight');
+    spotlightCards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    // Animated counter on scroll
     const counters = document.querySelectorAll('.stat-number');
     const counterObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -695,35 +630,28 @@
 
     counters.forEach(c => counterObserver.observe(c));
 
-    // 4. Drag-to-scroll projects track
-    const slider = document.getElementById('projectsScrollWrapper');
-    let isDown = false, startX, scrollLeft;
-
-    slider.addEventListener('mousedown', e => {
-      isDown = true;
-      slider.classList.add('grabbing');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    
-    slider.addEventListener('mouseleave', () => { 
-      isDown = false; 
-      slider.classList.remove('grabbing'); 
-    });
-    
-    slider.addEventListener('mouseup', () => { 
-      isDown = false; 
-      slider.classList.remove('grabbing'); 
-    });
-    
-    slider.addEventListener('mousemove', e => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      // Scroll speed multiplier
-      const walk = (x - startX) * 1.5;
-      slider.scrollLeft = scrollLeft - walk;
-    });
+    // 4. Drag-to-scroll horizontal tracks
+    const setupHorizontalScroll = (id) => {
+      const slider = document.getElementById(id);
+      if (!slider) return;
+      let isDown = false, startX, scrollLeft;
+      
+      slider.addEventListener('mousedown', e => {
+        isDown = true;
+        slider.classList.add('grabbing');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener('mouseleave', () => { isDown = false; slider.classList.remove('grabbing'); });
+      slider.addEventListener('mouseup', () => { isDown = false; slider.classList.remove('grabbing'); });
+      slider.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+      });
+    };
+    setupHorizontalScroll('eventsScrollWrapper');
 
     // 5. Scroll-triggered fade-in animations
     const animatedEls = document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in-up');
@@ -737,6 +665,688 @@
     }, { threshold: 0.15 });
 
     animatedEls.forEach(el => scrollObserver.observe(el));
+
+    // 6. Hero Background Slider
+    const heroSlides = document.querySelectorAll('.hero-bg-slide');
+    let currentSlide = 0;
+    setInterval(() => {
+      if (heroSlides.length > 0) {
+        heroSlides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        heroSlides[currentSlide].classList.add('active');
+      }
+    }, 5000);
+
+    // 7. Electric Border Buttons Vanilla JS implementation
+    const random = x => (Math.sin(x * 12.9898) * 43758.5453) % 1;
+    const noise2D = (x, y) => {
+      const i = Math.floor(x); const j = Math.floor(y);
+      const fx = x - i; const fy = y - j;
+      const a = random(i + j * 57); const b = random(i + 1 + j * 57);
+      const c = random(i + (j + 1) * 57); const d = random(i + 1 + (j + 1) * 57);
+      const ux = fx * fx * (3.0 - 2.0 * fx); const uy = fy * fy * (3.0 - 2.0 * fy);
+      return a * (1 - ux) * (1 - uy) + b * ux * (1 - uy) + c * (1 - ux) * uy + d * ux * uy;
+    };
+    const octavedNoise = (x, octaves, lacunarity, gain, baseAmplitude, baseFrequency, time, seed, baseFlatness) => {
+      let y = 0, amplitude = baseAmplitude, frequency = baseFrequency;
+      for (let i = 0; i < octaves; i++) {
+        let octaveAmplitude = i === 0 ? amplitude * baseFlatness : amplitude;
+        y += octaveAmplitude * noise2D(frequency * x + seed * 100, time * frequency * 0.3);
+        frequency *= lacunarity; amplitude *= gain;
+      }
+      return y;
+    };
+    const getCornerPoint = (centerX, centerY, radius, startAngle, arcLength, progress) => {
+      const angle = startAngle + progress * arcLength;
+      return { x: centerX + radius * Math.cos(angle), y: centerY + radius * Math.sin(angle) };
+    };
+    const getRoundedRectPoint = (t, left, top, width, height, radius) => {
+      const straightWidth = width - 2 * radius; const straightHeight = height - 2 * radius;
+      const cornerArc = (Math.PI * radius) / 2;
+      const totalPerimeter = 2 * straightWidth + 2 * straightHeight + 4 * cornerArc;
+      const distance = t * totalPerimeter;
+      let accumulated = 0;
+      if (distance <= accumulated + straightWidth) {
+        return { x: left + radius + (distance - accumulated), y: top };
+      } accumulated += straightWidth;
+      if (distance <= accumulated + cornerArc) {
+        return getCornerPoint(left + width - radius, top + radius, radius, -Math.PI / 2, Math.PI / 2, (distance - accumulated) / cornerArc);
+      } accumulated += cornerArc;
+      if (distance <= accumulated + straightHeight) {
+        return { x: left + width, y: top + radius + (distance - accumulated) };
+      } accumulated += straightHeight;
+      if (distance <= accumulated + cornerArc) {
+        return getCornerPoint(left + width - radius, top + height - radius, radius, 0, Math.PI / 2, (distance - accumulated) / cornerArc);
+      } accumulated += cornerArc;
+      if (distance <= accumulated + straightWidth) {
+        return { x: left + width - radius - (distance - accumulated), y: top + height };
+      } accumulated += straightWidth;
+      if (distance <= accumulated + cornerArc) {
+        return getCornerPoint(left + radius, top + height - radius, radius, Math.PI / 2, Math.PI / 2, (distance - accumulated) / cornerArc);
+      } accumulated += cornerArc;
+      if (distance <= accumulated + straightHeight) {
+        return { x: left, y: top + height - radius - (distance - accumulated) };
+      } accumulated += straightHeight;
+      return getCornerPoint(left + radius, top + radius, radius, Math.PI, Math.PI / 2, (distance - accumulated) / cornerArc);
+    };
+
+    document.querySelectorAll('.electric-border-wrapper').forEach(wrapper => {
+      const color = wrapper.getAttribute('data-color') || '#21d4e6';
+      const speed = 0.5, chaos = 0.1, borderRadius = 25;
+      
+      wrapper.className = `electric-border`;
+      wrapper.style.setProperty('--electric-border-color', color);
+      wrapper.style.borderRadius = `${borderRadius}px`;
+      
+      const content = wrapper.innerHTML;
+      wrapper.innerHTML = `
+        <div class="eb-canvas-container"><canvas class="eb-canvas"></canvas></div>
+        <div class="eb-layers"><div class="eb-glow-1"></div><div class="eb-glow-2"></div><div class="eb-background-glow"></div></div>
+        <div class="eb-content">${content}</div>
+      `;
+      
+      const canvas = wrapper.querySelector('.eb-canvas');
+      const ctx = canvas.getContext('2d');
+      let time = 0, lastFrameTime = performance.now();
+      let width, height;
+      
+      const updateSize = () => {
+        const rect = wrapper.getBoundingClientRect();
+        width = rect.width + 120; height = rect.height + 120;
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = width * dpr; canvas.height = height * dpr;
+        canvas.style.width = `${width}px`; canvas.style.height = `${height}px`;
+        ctx.scale(dpr, dpr);
+      };
+      
+      updateSize();
+      window.addEventListener('resize', updateSize);
+      
+      const draw = (currentTime) => {
+        const deltaTime = (currentTime - lastFrameTime) / 1000;
+        time += deltaTime * speed; lastFrameTime = currentTime;
+        
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        ctx.scale(dpr, dpr);
+        
+        ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        
+        const scale = 60, left = 60, top = 60;
+        const borderWidth = width - 120, borderHeight = height - 120;
+        const maxRadius = Math.min(borderWidth, borderHeight) / 2;
+        const radius = Math.min(borderRadius, maxRadius);
+        
+        const sampleCount = Math.floor((2 * (borderWidth + borderHeight) + 2 * Math.PI * radius) / 2);
+        ctx.beginPath();
+        for (let i = 0; i <= sampleCount; i++) {
+          const progress = i / sampleCount;
+          const point = getRoundedRectPoint(progress, left, top, borderWidth, borderHeight, radius);
+          const xNoise = octavedNoise(progress * 8, 10, 1.6, 0.7, chaos, 10, time, 0, 0);
+          const yNoise = octavedNoise(progress * 8, 10, 1.6, 0.7, chaos, 10, time, 1, 0);
+          if (i === 0) ctx.moveTo(point.x + xNoise * scale, point.y + yNoise * scale);
+          else ctx.lineTo(point.x + xNoise * scale, point.y + yNoise * scale);
+        }
+        ctx.closePath(); ctx.stroke();
+        requestAnimationFrame(draw);
+      };
+      requestAnimationFrame(draw);
+    });
+
+    // 8. Circular Gallery Vanilla JS
+    (function initCircularGallery() {
+      const container = document.getElementById('circular-gallery-container');
+      if (!container) return;
+
+      const start = () => {
+        const { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } = window.ogl;
+
+        function debounce(func, wait) {
+          let timeout;
+          return function (...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+          };
+        }
+
+        function lerp(p1, p2, t) {
+          return p1 + (p2 - p1) * t;
+        }
+
+        function autoBind(instance) {
+          const proto = Object.getPrototypeOf(instance);
+          Object.getOwnPropertyNames(proto).forEach(key => {
+            if (key !== 'constructor' && typeof instance[key] === 'function') {
+              instance[key] = instance[key].bind(instance);
+            }
+          });
+        }
+
+        function getFontSize(font) {
+          const match = font.match(/(\d+)px/);
+          return match ? parseInt(match[1], 10) : 30;
+        }
+
+        function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'black') {
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          context.font = font;
+          const metrics = context.measureText(text);
+          const textWidth = Math.ceil(metrics.width);
+          const textHeight = Math.ceil(getFontSize(font) * 1.2);
+          canvas.width = textWidth + 20;
+          canvas.height = textHeight + 20;
+          context.font = font;
+          context.fillStyle = color;
+          context.textBaseline = 'middle';
+          context.textAlign = 'center';
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          context.fillText(text, canvas.width / 2, canvas.height / 2);
+          const texture = new Texture(gl, { generateMipmaps: false });
+          texture.image = canvas;
+          return { texture, width: canvas.width, height: canvas.height };
+        }
+
+        class Title {
+          constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }) {
+            autoBind(this);
+            this.gl = gl;
+            this.plane = plane;
+            this.renderer = renderer;
+            this.text = text;
+            this.textColor = textColor;
+            this.font = font;
+            this.createMesh();
+          }
+          createMesh() {
+            const { texture, width, height } = createTextTexture(this.gl, this.text, this.font, this.textColor);
+            const geometry = new Plane(this.gl);
+            const program = new Program(this.gl, {
+              vertex: `
+                attribute vec3 position;
+                attribute vec2 uv;
+                uniform mat4 modelViewMatrix;
+                uniform mat4 projectionMatrix;
+                varying vec2 vUv;
+                void main() {
+                  vUv = uv;
+                  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+              `,
+              fragment: `
+                precision highp float;
+                uniform sampler2D tMap;
+                varying vec2 vUv;
+                void main() {
+                  vec4 color = texture2D(tMap, vUv);
+                  if (color.a < 0.1) discard;
+                  gl_FragColor = color;
+                }
+              `,
+              uniforms: { tMap: { value: texture } },
+              transparent: true
+            });
+            this.mesh = new Mesh(this.gl, { geometry, program });
+            const aspect = width / height;
+            const textHeight = this.plane.scale.y * 0.15;
+            const textWidth = textHeight * aspect;
+            this.mesh.scale.set(textWidth, textHeight, 1);
+            this.mesh.position.y = -this.plane.scale.y * 0.5 - textHeight * 0.5 - 0.05;
+            this.mesh.setParent(this.plane);
+          }
+        }
+
+        class Media {
+          constructor({ geometry, gl, image, index, length, renderer, scene, screen, text, viewport, bend, textColor, borderRadius = 0, font }) {
+            this.extra = 0;
+            this.geometry = geometry;
+            this.gl = gl;
+            this.image = image;
+            this.index = index;
+            this.length = length;
+            this.renderer = renderer;
+            this.scene = scene;
+            this.screen = screen;
+            this.text = text;
+            this.viewport = viewport;
+            this.bend = bend;
+            this.textColor = textColor;
+            this.borderRadius = borderRadius;
+            this.font = font;
+            this.createShader();
+            this.createMesh();
+            this.createTitle();
+            this.onResize();
+          }
+          createShader() {
+            const texture = new Texture(this.gl, { generateMipmaps: true });
+            this.program = new Program(this.gl, {
+              depthTest: false, depthWrite: false,
+              vertex: `
+                precision highp float;
+                attribute vec3 position;
+                attribute vec2 uv;
+                uniform mat4 modelViewMatrix;
+                uniform mat4 projectionMatrix;
+                uniform float uTime;
+                uniform float uSpeed;
+                varying vec2 vUv;
+                void main() {
+                  vUv = uv;
+                  vec3 p = position;
+                  p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * (0.1 + uSpeed * 0.5);
+                  gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
+                }
+              `,
+              fragment: `
+                precision highp float;
+                uniform vec2 uImageSizes;
+                uniform vec2 uPlaneSizes;
+                uniform sampler2D tMap;
+                uniform float uBorderRadius;
+                varying vec2 vUv;
+                
+                float roundedBoxSDF(vec2 p, vec2 b, float r) {
+                  vec2 d = abs(p) - b;
+                  return length(max(d, vec2(0.0))) + min(max(d.x, d.y), 0.0) - r;
+                }
+                
+                void main() {
+                  vec2 ratio = vec2(
+                    min((uPlaneSizes.x / uPlaneSizes.y) / (uImageSizes.x / uImageSizes.y), 1.0),
+                    min((uPlaneSizes.y / uPlaneSizes.x) / (uImageSizes.y / uImageSizes.x), 1.0)
+                  );
+                  vec2 uv = vec2(
+                    vUv.x * ratio.x + (1.0 - ratio.x) * 0.5,
+                    vUv.y * ratio.y + (1.0 - ratio.y) * 0.5
+                  );
+                  vec4 color = texture2D(tMap, uv);
+                  
+                  float d = roundedBoxSDF(vUv - 0.5, vec2(0.5 - uBorderRadius), uBorderRadius);
+                  float edgeSmooth = 0.002;
+                  float alpha = 1.0 - smoothstep(-edgeSmooth, edgeSmooth, d);
+                  gl_FragColor = vec4(color.rgb, alpha);
+                }
+              `,
+              uniforms: {
+                tMap: { value: texture },
+                uPlaneSizes: { value: [0, 0] },
+                uImageSizes: { value: [0, 0] },
+                uSpeed: { value: 0 },
+                uTime: { value: 100 * Math.random() },
+                uBorderRadius: { value: this.borderRadius }
+              },
+              transparent: true
+            });
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.src = this.image;
+            img.onload = () => {
+              texture.image = img;
+              this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
+            };
+          }
+          createMesh() {
+            this.plane = new Mesh(this.gl, { geometry: this.geometry, program: this.program });
+            this.plane.setParent(this.scene);
+          }
+          createTitle() {
+            this.title = new Title({ gl: this.gl, plane: this.plane, renderer: this.renderer, text: this.text, textColor: this.textColor, font: this.font });
+          }
+          update(scroll, direction) {
+            this.plane.position.x = this.x - scroll.current - this.extra;
+            const x = this.plane.position.x;
+            const H = this.viewport.width / 2;
+
+            if (this.bend === 0) {
+              this.plane.position.y = 0;
+              this.plane.rotation.z = 0;
+            } else {
+              const B_abs = Math.abs(this.bend);
+              const R = (H * H + B_abs * B_abs) / (2 * B_abs);
+              const effectiveX = Math.min(Math.abs(x), H);
+              const arc = R - Math.sqrt(R * R - effectiveX * effectiveX);
+              if (this.bend > 0) {
+                this.plane.position.y = -arc;
+                this.plane.rotation.z = -Math.sign(x) * Math.asin(effectiveX / R);
+              } else {
+                this.plane.position.y = arc;
+                this.plane.rotation.z = Math.sign(x) * Math.asin(effectiveX / R);
+              }
+            }
+
+            this.speed = scroll.current - scroll.last;
+            this.program.uniforms.uTime.value += 0.04;
+            this.program.uniforms.uSpeed.value = this.speed;
+
+            const planeOffset = this.plane.scale.x / 2;
+            const viewportOffset = this.viewport.width / 2;
+            this.isBefore = this.plane.position.x + planeOffset < -viewportOffset;
+            this.isAfter = this.plane.position.x - planeOffset > viewportOffset;
+            if (direction === 'right' && this.isBefore) {
+              this.extra -= this.widthTotal;
+              this.isBefore = this.isAfter = false;
+            }
+            if (direction === 'left' && this.isAfter) {
+              this.extra += this.widthTotal;
+              this.isBefore = this.isAfter = false;
+            }
+          }
+          onResize({ screen, viewport } = {}) {
+            if (screen) this.screen = screen;
+            if (viewport) {
+              this.viewport = viewport;
+              if (this.plane.program.uniforms.uViewportSizes) {
+                this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height];
+              }
+            }
+            this.scale = this.screen.height / 1500;
+            this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
+            this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+            this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
+            this.padding = 2;
+            this.width = this.plane.scale.x + this.padding;
+            this.widthTotal = this.width * this.length;
+            this.x = this.width * this.index;
+          }
+        }
+
+        class App {
+          constructor(container, { items, bend, textColor = '#ffffff', borderRadius = 0, font = 'bold 30px Nunito', scrollSpeed = 2, scrollEase = 0.05 } = {}) {
+            this.container = container;
+            this.scrollSpeed = scrollSpeed;
+            this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
+            this.onCheckDebounce = debounce(this.onCheck.bind(this), 200);
+            this.createRenderer();
+            this.createCamera();
+            this.createScene();
+            this.onResize();
+            this.createGeometry();
+            this.createMedias(items, bend, textColor, borderRadius, font);
+            this.update();
+            this.addEventListeners();
+          }
+          createRenderer() {
+            this.renderer = new Renderer({ alpha: true, antialias: true, dpr: Math.min(window.devicePixelRatio || 1, 2) });
+            this.gl = this.renderer.gl;
+            this.gl.clearColor(0, 0, 0, 0);
+            this.container.appendChild(this.gl.canvas);
+          }
+          createCamera() {
+            this.camera = new Camera(this.gl);
+            this.camera.fov = 45;
+            this.camera.position.z = 20;
+          }
+          createScene() {
+            this.scene = new Transform();
+          }
+          createGeometry() {
+            this.planeGeometry = new Plane(this.gl, { heightSegments: 50, widthSegments: 100 });
+          }
+          createMedias(items, bend = 1, textColor, borderRadius, font) {
+            const galleryItems = items;
+            this.mediasImages = galleryItems.concat(galleryItems);
+            this.medias = this.mediasImages.map((data, index) => {
+              return new Media({
+                geometry: this.planeGeometry, gl: this.gl, image: data.image, index, length: this.mediasImages.length,
+                renderer: this.renderer, scene: this.scene, screen: this.screen, text: data.text, viewport: this.viewport,
+                bend, textColor, borderRadius, font
+              });
+            });
+          }
+          onTouchDown(e) {
+            this.isDown = true;
+            this.scroll.position = this.scroll.current;
+            this.start = e.touches ? e.touches[0].clientX : e.clientX;
+          }
+          onTouchMove(e) {
+            if (!this.isDown) return;
+            const x = e.touches ? e.touches[0].clientX : e.clientX;
+            const distance = (this.start - x) * (this.scrollSpeed * 0.025);
+            this.scroll.target = this.scroll.position + distance;
+          }
+          onTouchUp() {
+            this.isDown = false;
+            this.onCheck();
+          }
+          onWheel(e) {
+            const delta = e.deltaY || e.wheelDelta || e.detail;
+            this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
+            this.onCheckDebounce();
+          }
+          onCheck() {
+            if (!this.medias || !this.medias[0]) return;
+            const width = this.medias[0].width;
+            const itemIndex = Math.round(Math.abs(this.scroll.target) / width);
+            const item = width * itemIndex;
+            this.scroll.target = this.scroll.target < 0 ? -item : item;
+          }
+          onResize() {
+            this.screen = { width: this.container.clientWidth, height: this.container.clientHeight };
+            this.renderer.setSize(this.screen.width, this.screen.height);
+            this.camera.perspective({ aspect: this.screen.width / this.screen.height });
+            const fov = (this.camera.fov * Math.PI) / 180;
+            const height = 2 * Math.tan(fov / 2) * this.camera.position.z;
+            const width = height * this.camera.aspect;
+            this.viewport = { width, height };
+            if (this.medias) {
+              this.medias.forEach(media => media.onResize({ screen: this.screen, viewport: this.viewport }));
+            }
+          }
+          update() {
+            this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
+            const direction = this.scroll.current > this.scroll.last ? 'right' : 'left';
+            if (this.medias) {
+              this.medias.forEach(media => media.update(this.scroll, direction));
+            }
+            this.renderer.render({ scene: this.scene, camera: this.camera });
+            this.scroll.last = this.scroll.current;
+            this.raf = window.requestAnimationFrame(this.update.bind(this));
+          }
+          addEventListeners() {
+            this.boundOnResize = this.onResize.bind(this);
+            this.boundOnWheel = this.onWheel.bind(this);
+            this.boundOnTouchDown = this.onTouchDown.bind(this);
+            this.boundOnTouchMove = this.onTouchMove.bind(this);
+            this.boundOnTouchUp = this.onTouchUp.bind(this);
+            window.addEventListener('resize', this.boundOnResize);
+            this.container.addEventListener('wheel', this.boundOnWheel, { passive: true });
+            this.container.addEventListener('mousedown', this.boundOnTouchDown);
+            this.container.addEventListener('mousemove', this.boundOnTouchMove);
+            this.container.addEventListener('mouseup', this.boundOnTouchUp);
+            this.container.addEventListener('mouseleave', this.boundOnTouchUp);
+            this.container.addEventListener('touchstart', this.boundOnTouchDown, { passive: true });
+            this.container.addEventListener('touchmove', this.boundOnTouchMove, { passive: true });
+            this.container.addEventListener('touchend', this.boundOnTouchUp);
+          }
+        }
+
+        const items = [
+          { image: 'https://images.weserv.nl/?url=https://inamigosfoundation.org.in/public/storage/gallery/1743051485.jpg', text: 'BachpanShala' },
+          { image: 'https://images.weserv.nl/?url=https://inamigosfoundation.org.in/public/storage/gallery/1743051466.jpg', text: 'Project Seva' },
+          { image: 'https://images.weserv.nl/?url=https://inamigosfoundation.org.in/public/storage/gallery/1743051449.jpg', text: 'Project Udaan' },
+          { image: 'https://images.weserv.nl/?url=https://inamigosfoundation.org.in/public/storage/gallery/1743051438.jpg', text: 'Project Jeev' },
+          { image: 'https://images.weserv.nl/?url=https://inamigosfoundation.org.in/public/storage/gallery/1738054458.jpg', text: 'Project Prakriti' },
+          { image: 'https://images.weserv.nl/?url=https://inamigosfoundation.org.in/public/storage/gallery/1738054440.jpg', text: 'Project Vikas' }
+        ];
+
+        container.classList.add('circular-gallery');
+        new App(container, {
+          items: items,
+          bend: 3,
+          textColor: '#1a1a2e',
+          borderRadius: 0.05,
+          font: 'bold 24px Nunito',
+          scrollSpeed: 3,
+          scrollEase: 0.09
+        });
+      };
+
+      if (window.ogl) start();
+      else window.addEventListener('ogl-ready', start);
+    })();
+
+    // 9. LightRays Background for About Section
+    (function initLightRays() {
+      const container = document.getElementById('light-rays-container');
+      if (!container) return;
+
+      const start = () => {
+        const { Renderer, Program, Triangle, Mesh } = window.ogl;
+        const hexToRgb = hex => {
+          const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+          return m ? [parseInt(m[1], 16) / 255, parseInt(m[2], 16) / 255, parseInt(m[3], 16) / 255] : [1, 1, 1];
+        };
+        
+        const getAnchorAndDir = (origin, w, h) => {
+          const outside = 0.2;
+          switch (origin) {
+            case 'top-left': return { anchor: [0, -outside * h], dir: [0, 1] };
+            case 'top-right': return { anchor: [w, -outside * h], dir: [0, 1] };
+            case 'left': return { anchor: [-outside * w, 0.5 * h], dir: [1, 0] };
+            case 'right': return { anchor: [(1 + outside) * w, 0.5 * h], dir: [-1, 0] };
+            case 'bottom-left': return { anchor: [0, (1 + outside) * h], dir: [0, -1] };
+            case 'bottom-center': return { anchor: [0.5 * w, (1 + outside) * h], dir: [0, -1] };
+            case 'bottom-right': return { anchor: [w, (1 + outside) * h], dir: [0, -1] };
+            default: return { anchor: [0.5 * w, -outside * h], dir: [0, 1] };
+          }
+        };
+
+        const options = {
+          raysOrigin: 'top-center', raysColor: '#e5dede', raysSpeed: 0.8,
+          lightSpread: 0.8, rayLength: 1.2, pulsating: true, fadeDistance: 1.5,
+          saturation: 1.2, followMouse: true, mouseInfluence: 0.1, noiseAmount: 0.1, distortion: 0.05
+        };
+
+        let isVisible = false;
+        const observer = new IntersectionObserver(entries => {
+          isVisible = entries[0].isIntersecting;
+        }, { threshold: 0.1 });
+        observer.observe(container);
+
+        const renderer = new Renderer({ dpr: Math.min(window.devicePixelRatio, 2), alpha: true });
+        const gl = renderer.gl;
+        gl.canvas.style.width = '100%'; gl.canvas.style.height = '100%';
+        container.appendChild(gl.canvas);
+
+        const vert = `
+          attribute vec2 position;
+          varying vec2 vUv;
+          void main() {
+            vUv = position * 0.5 + 0.5;
+            gl_Position = vec4(position, 0.0, 1.0);
+          }`;
+
+        const frag = `
+          precision highp float;
+          uniform float iTime; uniform vec2 iResolution; uniform vec2 rayPos; uniform vec2 rayDir;
+          uniform vec3 raysColor; uniform float raysSpeed; uniform float lightSpread;
+          uniform float rayLength; uniform float pulsating; uniform float fadeDistance;
+          uniform float saturation; uniform vec2 mousePos; uniform float mouseInfluence;
+          uniform float noiseAmount; uniform float distortion;
+          varying vec2 vUv;
+          float noise(vec2 st) { return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123); }
+          float rayStrength(vec2 raySource, vec2 rayRefDirection, vec2 coord, float seedA, float seedB, float speed) {
+            vec2 sourceToCoord = coord - raySource;
+            vec2 dirNorm = normalize(sourceToCoord);
+            float cosAngle = dot(dirNorm, rayRefDirection);
+            float distortedAngle = cosAngle + distortion * sin(iTime * 2.0 + length(sourceToCoord) * 0.01) * 0.2;
+            float spreadFactor = pow(max(distortedAngle, 0.0), 1.0 / max(lightSpread, 0.001));
+            float distance = length(sourceToCoord);
+            float maxDistance = iResolution.x * rayLength;
+            float lengthFalloff = clamp((maxDistance - distance) / maxDistance, 0.0, 1.0);
+            float fadeFalloff = clamp((iResolution.x * fadeDistance - distance) / (iResolution.x * fadeDistance), 0.5, 1.0);
+            float pulse = pulsating > 0.5 ? (0.8 + 0.2 * sin(iTime * speed * 3.0)) : 1.0;
+            float baseStrength = clamp((0.45 + 0.15 * sin(distortedAngle * seedA + iTime * speed)) + (0.3 + 0.2 * cos(-distortedAngle * seedB + iTime * speed)), 0.0, 1.0);
+            return baseStrength * lengthFalloff * fadeFalloff * spreadFactor * pulse;
+          }
+          void mainImage(out vec4 fragColor, in vec2 fragCoord) {
+            vec2 coord = vec2(fragCoord.x, iResolution.y - fragCoord.y);
+            vec2 finalRayDir = rayDir;
+            if (mouseInfluence > 0.0) {
+              vec2 mouseScreenPos = mousePos * iResolution.xy;
+              vec2 mouseDirection = normalize(mouseScreenPos - rayPos);
+              finalRayDir = normalize(mix(rayDir, mouseDirection, mouseInfluence));
+            }
+            vec4 rays1 = vec4(1.0) * rayStrength(rayPos, finalRayDir, coord, 36.2214, 21.11349, 1.5 * raysSpeed);
+            vec4 rays2 = vec4(1.0) * rayStrength(rayPos, finalRayDir, coord, 22.3991, 18.0234, 1.1 * raysSpeed);
+            fragColor = rays1 * 0.5 + rays2 * 0.4;
+            if (noiseAmount > 0.0) {
+              float n = noise(coord * 0.01 + iTime * 0.1);
+              fragColor.rgb *= (1.0 - noiseAmount + noiseAmount * n);
+            }
+            float brightness = 1.0 - (coord.y / iResolution.y);
+            fragColor.x *= 0.1 + brightness * 0.8;
+            fragColor.y *= 0.3 + brightness * 0.6;
+            fragColor.z *= 0.5 + brightness * 0.5;
+            if (saturation != 1.0) {
+              float gray = dot(fragColor.rgb, vec3(0.299, 0.587, 0.114));
+              fragColor.rgb = mix(vec3(gray), fragColor.rgb, saturation);
+            }
+            fragColor.rgb *= raysColor;
+          }
+          void main() { vec4 color; mainImage(color, gl_FragCoord.xy); gl_FragColor = color; }`;
+
+        const uniforms = {
+          iTime: { value: 0 }, iResolution: { value: [1, 1] },
+          rayPos: { value: [0, 0] }, rayDir: { value: [0, 1] },
+          raysColor: { value: hexToRgb(options.raysColor) }, raysSpeed: { value: options.raysSpeed },
+          lightSpread: { value: options.lightSpread }, rayLength: { value: options.rayLength },
+          pulsating: { value: options.pulsating ? 1.0 : 0.0 }, fadeDistance: { value: options.fadeDistance },
+          saturation: { value: options.saturation }, mousePos: { value: [0.5, 0.5] },
+          mouseInfluence: { value: options.mouseInfluence }, noiseAmount: { value: options.noiseAmount },
+          distortion: { value: options.distortion }
+        };
+
+        const geometry = new Triangle(gl);
+        const program = new Program(gl, { vertex: vert, fragment: frag, uniforms });
+        const mesh = new Mesh(gl, { geometry, program });
+        
+        const mouse = { x: 0.5, y: 0.5 };
+        const smoothMouse = { x: 0.5, y: 0.5 };
+
+        const updatePlacement = () => {
+          renderer.dpr = Math.min(window.devicePixelRatio, 2);
+          const { clientWidth: wCSS, clientHeight: hCSS } = container;
+          renderer.setSize(wCSS, hCSS);
+          const dpr = renderer.dpr;
+          const w = wCSS * dpr; const h = hCSS * dpr;
+          uniforms.iResolution.value = [w, h];
+          const { anchor, dir } = getAnchorAndDir(options.raysOrigin, w, h);
+          uniforms.rayPos.value = anchor; uniforms.rayDir.value = dir;
+        };
+
+        const loop = t => {
+          if (!isVisible) {
+            requestAnimationFrame(loop);
+            return;
+          }
+          uniforms.iTime.value = t * 0.001;
+          if (options.followMouse && options.mouseInfluence > 0.0) {
+            const smoothing = 0.92;
+            smoothMouse.x = smoothMouse.x * smoothing + mouse.x * (1 - smoothing);
+            smoothMouse.y = smoothMouse.y * smoothing + mouse.y * (1 - smoothing);
+            uniforms.mousePos.value = [smoothMouse.x, smoothMouse.y];
+          }
+          renderer.render({ scene: mesh });
+          requestAnimationFrame(loop);
+        };
+
+        window.addEventListener('resize', updatePlacement);
+        updatePlacement();
+        requestAnimationFrame(loop);
+
+        window.addEventListener('mousemove', e => {
+          const rect = container.getBoundingClientRect();
+          mouse.x = (e.clientX - rect.left) / rect.width;
+          mouse.y = (e.clientY - rect.top) / rect.height;
+        });
+      };
+
+      if (window.ogl) start();
+      else window.addEventListener('ogl-ready', start);
+    })();
   </script>
 </body>
 </html>
