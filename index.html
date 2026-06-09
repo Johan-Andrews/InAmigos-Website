@@ -54,10 +54,16 @@
         <li><a href="#about" id="navLinkAbout">About</a></li>
         <li><a href="#projects" id="navLinkProjects">Projects</a></li>
         <li><a href="#impact" id="navLinkImpact">Impact</a></li>
+        <li><a href="#volunteers" id="navLinkVolunteers">Volunteers</a></li>
         <li><a href="#gallery" id="navLinkGallery">Gallery</a></li>
         <li><a href="#events" id="navLinkEvents">Events</a></li>
-        <li><a href="https://inamigosfoundation.org.in/contact" target="_blank" class="nav-donate-btn" id="navDonateBtn">Donate ❤️</a></li>
+        <li class="mobile-only"><a href="https://inamigosfoundation.org.in/contact" target="_blank" class="nav-contact-btn">Contact</a></li>
+        <li class="mobile-only"><a href="https://pages.razorpay.com/pl_H621G6ea64ZMl7/view" target="_blank" class="nav-donate-btn">Donate ❤️</a></li>
       </ul>
+      <div class="nav-actions">
+        <a href="https://inamigosfoundation.org.in/contact" target="_blank" class="nav-contact-btn" id="navContactBtn">Contact</a>
+        <a href="https://pages.razorpay.com/pl_H621G6ea64ZMl7/view" target="_blank" class="nav-donate-btn" id="navDonateBtn">Donate ❤️</a>
+      </div>
     </div>
   </nav>
 
@@ -301,6 +307,67 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Volunteers Section -->
+  <section class="volunteers-section" id="volunteers" style="padding: 5rem 2rem; background: var(--cream);">
+    <div class="container">
+      <div class="section-label" style="text-align: center;">🤝 Our Team</div>
+      <h2 class="section-title center">Meet Our Volunteers</h2>
+      
+      <div class="volunteers-grid" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
+        
+        <!-- Member 1 -->
+        <div class="volunteer-card" style="text-align: center; width: 200px;">
+          <div style="width: 150px; height: 150px; border-radius: 50%; background: #ccc; margin: 0 auto 1rem; overflow: hidden;">
+            <img src="assets/Screenshot 2026-06-09 122800.png" alt="Govind Shukla" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 0.5rem; font-size: 1.2rem;">Govind Shukla</h3>
+          <p style="font-family: 'Nunito', sans-serif; color: var(--text-dark); font-size: 0.9rem;">Founder and CEO</p>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="volunteer-card" style="text-align: center; width: 200px;">
+          <div style="width: 150px; height: 150px; border-radius: 50%; background: #ccc; margin: 0 auto 1rem; overflow: hidden;">
+            <img src="assets/Screenshot 2026-06-09 122809.png" alt="Sagarika jaiswal" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 0.5rem; font-size: 1.2rem;">Sagarika jaiswal</h3>
+          <p style="font-family: 'Nunito', sans-serif; color: var(--text-dark); font-size: 0.9rem;">Head of core member</p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="volunteer-card" style="text-align: center; width: 200px;">
+          <div style="width: 150px; height: 150px; border-radius: 50%; background: #ccc; margin: 0 auto 1rem; overflow: hidden;">
+            <img src="assets/Screenshot 2026-06-09 122816.png" alt="Khush Gupta" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 0.5rem; font-size: 1.2rem;">Khush Gupta</h3>
+          <p style="font-family: 'Nunito', sans-serif; color: var(--text-dark); font-size: 0.9rem;">Deputy Head of Core member</p>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="volunteer-card" style="text-align: center; width: 200px;">
+          <div style="width: 150px; height: 150px; border-radius: 50%; background: #ccc; margin: 0 auto 1rem; overflow: hidden;">
+            <img src="assets/Screenshot 2026-06-09 122824.png" alt="Iniya Radhakrishnan" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 0.5rem; font-size: 1.2rem;">Iniya Radhakrishnan</h3>
+          <p style="font-family: 'Nunito', sans-serif; color: var(--text-dark); font-size: 0.9rem;">Head of Internship department</p>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="volunteer-card" style="text-align: center; width: 200px;">
+          <div style="width: 150px; height: 150px; border-radius: 50%; background: #ccc; margin: 0 auto 1rem; overflow: hidden;">
+            <img src="assets/Screenshot 2026-06-09 122830.png" alt="Shiwani ." style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 0.5rem; font-size: 1.2rem;">Shiwani .</h3>
+          <p style="font-family: 'Nunito', sans-serif; color: var(--text-dark); font-size: 0.9rem;">Team leader of core member</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://inamigosfoundation.org.in/volunteers" target="_blank" class="btn btn-secondary">See more</a>
+      </div>
     </div>
   </section>
 
@@ -601,6 +668,37 @@
         const y = e.clientY - rect.top;
         card.style.setProperty('--mouse-x', `${x}px`);
         card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    // Dock Effect for Navbar Items
+    const navLinksList = document.querySelectorAll('.nav-links li a');
+    const maxDist = 150;
+    const baseScale = 1;
+    const maxScale = 1.15;
+
+    document.querySelector('.nav-links').addEventListener('mousemove', (e) => {
+      if (window.innerWidth <= 768) return; // Disable on mobile
+      navLinksList.forEach(link => {
+        const rect = link.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const dist = Math.abs(e.clientX - centerX);
+        
+        if (dist < maxDist) {
+          const scale = baseScale + (maxScale - baseScale) * (1 - dist / maxDist);
+          link.style.transform = `scale(${scale})`;
+          link.style.margin = `0 ${8 * (1 - dist / maxDist)}px`;
+        } else {
+          link.style.transform = `scale(${baseScale})`;
+          link.style.margin = '0px';
+        }
+      });
+    });
+
+    document.querySelector('.nav-links').addEventListener('mouseleave', () => {
+      navLinksList.forEach(link => {
+        link.style.transform = `scale(${baseScale})`;
+        link.style.margin = '0px';
       });
     });
 
@@ -1214,8 +1312,8 @@
         };
 
         const options = {
-          raysOrigin: 'top-center', raysColor: '#e5dede', raysSpeed: 0.8,
-          lightSpread: 0.8, rayLength: 1.2, pulsating: true, fadeDistance: 1.5,
+          raysOrigin: 'top-center', raysColor: '#E85D26', raysSpeed: 0.8,
+          lightSpread: 1.2, rayLength: 1.8, pulsating: true, fadeDistance: 2.0,
           saturation: 1.2, followMouse: true, mouseInfluence: 0.1, noiseAmount: 0.1, distortion: 0.05
         };
 
