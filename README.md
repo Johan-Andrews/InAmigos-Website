@@ -6,9 +6,9 @@ A modern, highly interactive, and visually rich awareness webpage designed for *
 
 ## 📸 Screenshots
 
-![Hero Section](assets/screenshot 2026-06-10 125149.png)
-![Projects Overview](assets/screenshot 2026-06-10 125242.png)
-![Volunteer Details](assets/screenshot 2026-06-10 125308.png)
+![Hero Section](assets/ss_hero.png)
+![Projects Overview](assets/ss-projects.png)
+![Volunteer Details](assets/ss-volunteers.png)
 
 ---
 
